@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form" action="../send.php" onsubmit="submitForm(event)" enctype="multipart/form-data" method="post">
+      <div class="form">
+        <div class="form-header">Форма заказа</div>
+        <p>
+          <label>
+            <span class="wpcf7-form-control-wrap" data-name="your-name">
+              <input
+                class="input-name"
+                name="name"
+                size="40"
+                type="text"
+                value=""
+                placeholder="Имя (обязательно)"
+                aria-required="true"
+                aria-invalid="false"
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="wpcf7-form-control-wrap" data-name="your-email">
+              <input
+                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                name="email"
+                size="40"
+                type="email"
+                value=""
+                placeholder="Email (обязательно)"
+                aria-required="true"
+                aria-invalid="false"
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <input
+            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel"
+            name="tel"
+            size="40"
+            type="tel"
+            value=""
+            placeholder="Телефон"
+            aria-invalid="false"
+          />
+        </p>
+        <p>
+          <label
+            ><br /><span class="wpcf7-form-control-wrap" data-name="your-message"
+              ><br /><input
+                class="wpcf7-form-control wpcf7-text text mt20 first-input-link"
+                name="text"
+                type="text"
+                placeholder="https://someshop.com (обязательно)"
+                aria-required="true"
+                aria-invalid="false" /></span
+          ></label>
+        </p>
+        <div class="color-size-article">
+          <p>
+            <label>
+              <span class="wpcf7-form-control-wrap" data-name="text-508"
+                ><input
+                  class="wpcf7-form-control wpcf7-text color"
+                  name="color"
+                  size="40"
+                  type="text"
+                  value=""
+                  placeholder="Цвет"
+                  aria-invalid="false"
+              /></span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <span class="wpcf7-form-control-wrap" data-name="text-703"
+                ><input
+                  class="wpcf7-form-control wpcf7-text size"
+                  name="size"
+                  size="40"
+                  type="text"
+                  value=""
+                  placeholder="Размер"
+                  aria-invalid="false"
+              /></span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <span class="wpcf7-form-control-wrap" data-name="text-950"
+                ><input
+                  class="wpcf7-form-control wpcf7-text article"
+                  name="article"
+                  size="40"
+                  type="text"
+                  value=""
+                  placeholder="Артикул"
+                  aria-invalid="false"
+              /></span>
+            </label>
+          </p>
+        </div>
+        <p class="button-add-new-p"><a class="button-add-new" href="##">Добавить еще один товар</a></p>
+      </div>
+      <p><input id="submit" class="submit-button" disabled="disabled" type="submit" value="Отправить" /></p>
+      <p>
+        <script src="../prePHPMailer.js"></script>
+        <script src="../script.js"></script>
+      </p>
+    </form>
+  </body>
+</html>
