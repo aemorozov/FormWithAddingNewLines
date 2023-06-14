@@ -39,14 +39,14 @@ if (!error_get_last()) {
     
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'leafspb'; // Логин на почте
-    $mail->Password   = 'gpukhtuodbvzfofl'; // Пароль на почте
+    $mail->Username   = 'login почтового сервера'; // Логин на почте
+    $mail->Password   = 'password'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('admin@test.aemorozov.com', 'Форма обратной связи на сайте'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('подпись email от кого', 'Форма обратной связи на сайте'); // Адрес самой почты и имя отправителя
     
     // Получатель письма
-    $mail->addAddress('leafspb@gmail.com');  
+    $mail->addAddress('email кому отправлять');  
     
     // Прикрипление файлов к письму
     if (!empty($file['name'][0])) {
