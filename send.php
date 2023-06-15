@@ -11,6 +11,7 @@ if (!error_get_last()) {
     $name = $_POST['name'] ;
     $email = $_POST['email'];
     $tel = $_POST['tel'] ;
+    $address = $_POST['address'];
     $text = $_POST['text'];
     // $color = $_POST['color'] ;
     // $size = $_POST['size'] ;
@@ -25,6 +26,7 @@ if (!error_get_last()) {
     <b>Имя:</b> $name<br>
     <b>Email:</b> $email<br>
     <b>Телефон:</b> $tel<br><br>
+    <b>Адрес:</b> $address<br><br>
     <b>Сообщение:</b><br><br>$text
     ";
     
@@ -39,14 +41,14 @@ if (!error_get_last()) {
     
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'login почтового сервера'; // Логин на почте
-    $mail->Password   = 'password'; // Пароль на почте
+    $mail->Username   = ''; // Логин на почте
+    $mail->Password   = ''; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('подпись email от кого', 'Форма обратной связи на сайте'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('', 'Форма обратной связи на сайте'); // Адрес самой почты и имя отправителя
     
     // Получатель письма
-    $mail->addAddress('email кому отправлять');  
+    $mail->addAddress('');  
     
     // Прикрипление файлов к письму
     if (!empty($file['name'][0])) {

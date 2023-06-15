@@ -4,6 +4,7 @@ const buttonSend = document.querySelector('#submit');
 const inputName = document.querySelector('.input-name')
 const inputEmail = document.querySelector('.wpcf7-email')
 const inputTel = document.querySelector('.wpcf7-tel')
+const inputAddress = document.querySelector('.wpcf7-address')
 const firstLinkInput = document.querySelector('.first-input-link')
 
 let nameLength = 0
@@ -34,12 +35,24 @@ firstLinkInput.addEventListener('input', (event) => {
     isSubmitReady()
 })
 
+inputTel.addEventListener('input', (event) => {
+    inputTelLength = event.target.value.length
+    isSubmitReady()
+})
+
+inputAddress.addEventListener('input', (event) => {
+    inputAddressLength = event.target.value.length
+    isSubmitReady()
+})
+
 function isSubmitReady() {
     if (nameLength > 2
         && emailLength > 6
         && firstLinkLength > 10
         && inputEmail.value.split('').includes('@')
         && firstLinkInput.value.split('//')[0].includes('https:')
+        && inputTelLength > 7
+        && inputAddressLength > 10
     ) {
         buttonSend.removeAttribute('disabled')
     } else {
@@ -64,7 +77,7 @@ button.addEventListener("click", () => {
                                     rows="1" 
                                     class="wpcf7-form-control wpcf7-text text mt20" 
                                     aria-invalid="false" 
-                                    placeholder="https://someshop.com" 
+                                    placeholder="Ապրանքի հղումը: https://someshop.com" 
                                     type="text"
                                     name="text" >
                                     <br>
@@ -79,7 +92,7 @@ button.addEventListener("click", () => {
                                         <input size="40" 
                                         class="wpcf7-form-control wpcf7-text color" 
                                         aria-invalid="false" 
-                                        placeholder="Цвет" 
+                                        placeholder="Գույն" 
                                         value="" 
                                         type="text" 
                                         name="color">
@@ -91,7 +104,7 @@ button.addEventListener("click", () => {
                                         <input size="40" 
                                         class="wpcf7-form-control wpcf7-text size" 
                                         aria-invalid="false" 
-                                        placeholder="Размер" 
+                                        placeholder="Չափսերի ուղեցույց" 
                                         value="" 
                                         type="text" 
                                         name="size">
@@ -103,7 +116,7 @@ button.addEventListener("click", () => {
                                         <input size="40" 
                                         class="wpcf7-form-control wpcf7-text article" 
                                         aria-invalid="false" 
-                                        placeholder="Артикул" 
+                                        placeholder="Արտիկուլ" 
                                         value="" 
                                         type="text" 
                                         name="article">
@@ -146,10 +159,11 @@ buttonSend.addEventListener('click', (event) => {
         inputName.value = '';
         inputEmail.value = '';
         inputTel.value = '';
+        inputAddress.value = '';
     }, 500)
 
     setTimeout(() => {
-        // window.location.replace("/պատվեր/");
+        window.location.replace("/կատարել-պատվեր/");
     }, 3000)
 })
 
