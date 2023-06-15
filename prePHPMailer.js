@@ -163,7 +163,7 @@ buttonSend.addEventListener('click', (event) => {
     }, 500)
 
     setTimeout(() => {
-        window.location.replace("/կատարել-պատվեր/");
+        window.location.replace("/");
     }, 3000)
 })
 
