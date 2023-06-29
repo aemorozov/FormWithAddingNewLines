@@ -10,4 +10,4 @@ This form is construct by free "phpmailer" and have "prePHPMailer.js" file, wher
 - some checking required lines
 - getting all "text" lines and construct one row in last "text" line with fixed and dynamic text (number of row, "Color", "Size", "Article")
 
-I know, that it can did it better, but my client wanted do it faster and did't want pay a lot for this form. Maybe anytime I will can optimize it.
+I know, that I can did it better, but my client wanted do it faster and did't want pay a lot for this form. Maybe anytime I will can optimize it.
